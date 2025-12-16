@@ -14,9 +14,9 @@ import pytesseract
 # be configured using environment variables instead.
 # ============================================================
 
-pytesseract.pytesseract.tesseract_cmd = (
-    r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-)
+#pytesseract.pytesseract.tesseract_cmd = (
+    #r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+#)
 
 
 # ============================================================
@@ -221,4 +221,5 @@ class SudokuImageToGrid:
             1 for r in range(9)
             for c in range(9)
             if grid[r][c] != 0
+
         )
