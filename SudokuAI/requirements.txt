@@ -1,6 +1,0 @@
-docker
-tensorflow
-opencv-python-headless
-pytesseract
-emnist
-imutils
