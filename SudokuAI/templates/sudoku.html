@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- =========================
+         META INFORMATION
+         ========================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku AI Solver</title>
+
+    <!-- =========================
+         STYLESHEET
+         ========================= -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <!-- =========================
+         HEADER / TOPBAR
+         ========================= -->
+    <header class="topbar">
+        <div class="container">
+            <h1>Sudoku AI Solver</h1>
+            <p>Upload a puzzle, review OCR results, edit if needed, and solve instantly.</p>
+        </div>
+    </header>
+
+    <!-- =========================
+         LOADING OVERLAY
+         ========================= -->
+    <div id="loadingOverlay" class="loading hidden">
+        <div class="loader-card">
+            <div class="spinner"></div>
+            <p id="loadingText">Processing…</p>
+        </div>
+    </div>
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+    <main class="container">
+
+        <!-- =========================
+             1. UPLOAD IMAGE SECTION
+             ========================= -->
+        <section class="card">
+            <h2>1. Upload Sudoku Image</h2>
+            <div class="upload-row">
+                <!-- File input for Sudoku image -->
+                <input type="file" id="sudokuImage" accept="image/*">
+                <!-- Button to trigger upload and OCR extraction -->
+                <button id="uploadBtn">Upload & Extract</button>
+            </div>
+            <p class="hint">
+                Tip: Clear, straight photos give the best OCR results.
+            </p>
+        </section>
+
+        <!-- =========================
+             2. REVIEW & EDIT GRID
+             ========================= -->
+        <section class="card center">
+            <h2>2. Review & Edit Grid</h2>
+
+            <!-- Sudoku grid will be rendered here dynamically -->
+            <div id="gridContainer"></div>
+
+            <!-- Rules / Instructions for editing, it appears after pressing upload and extract -->
+            <div id="gridInstructions" class="instructions hidden">
+
+            </div>
+        </section>
+
+        <!-- =========================
+             3. SOLVE BUTTON
+             ========================= -->
+        <section class="card center">
+            <h2>3. Solve Puzzle</h2>
+            <button id="solveBtn" class="primary">Solve Sudoku</button>
+        </section>
+
+    </main>
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+    <footer class="footer">
+        <p>Built by Marcus Rakkhit</p>
+    </footer>
+
+    <!-- =========================
+         source of the Javascript File
+         ========================= -->
+    <script src="/static/script.js"></script>
+
+</body>
+</html>

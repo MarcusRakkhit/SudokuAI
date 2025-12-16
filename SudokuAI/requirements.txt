@@ -1,0 +1,9 @@
+opencv-python-headless
+pytesseract
+emnist
+imutils
+fastapi
+uvicorn[standard]
+jinja2
+numpy
+python-multipart
